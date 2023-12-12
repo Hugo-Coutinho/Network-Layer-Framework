@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Network",
+    name: "NetworkLayerPackage",
     platforms: [
             .iOS(.v16)
         ],
