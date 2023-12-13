@@ -10,14 +10,14 @@ let package = Package(
         ],
     products: [
         .library(
-            name: "Network",
-            targets: ["Network"]),
+            name: "NetworkLayerPackage",
+            targets: ["NetworkLayerPackage"]),
     ],
     targets: [
         .target(
-            name: "Network"),
+            name: "NetworkLayerPackage"),
         .testTarget(
             name: "NetworkTests",
-            dependencies: ["Network"]),
+            dependencies: ["NetworkLayerPackage"]),
     ]
 )
