@@ -4,20 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "NetworkLayerPackage",
+    name: "HGNetworkLayer",
     platforms: [
             .iOS(.v16)
         ],
     products: [
         .library(
-            name: "NetworkLayerPackage",
-            targets: ["NetworkLayerPackage"]),
+            name: "HGNetworkLayer",
+            targets: ["HGNetworkLayer"]),
     ],
     targets: [
         .target(
-            name: "NetworkLayerPackage"),
+            name: "HGNetworkLayer"),
         .testTarget(
             name: "NetworkTests",
-            dependencies: ["NetworkLayerPackage"]),
+            dependencies: ["HGNetworkLayer"]),
     ]
 )
