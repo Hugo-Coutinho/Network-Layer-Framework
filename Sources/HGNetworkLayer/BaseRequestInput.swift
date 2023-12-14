@@ -12,5 +12,9 @@ import Combine
 public protocol BaseRequestInput: AnyObject {
     // MARK: - INPUT METHODS -
     func doRequest(urlString: String, completionHandler: @escaping (Data?) -> Void)
+}
+
+public protocol BasePublisherInput: AnyObject {
+    // MARK: - INPUT METHODS -
     func fetchAnyPublisherWith(_ url: URL) -> AnyPublisher<Data, APIError>
 }

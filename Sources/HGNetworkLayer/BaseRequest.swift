@@ -45,7 +45,11 @@ public class BaseRequest: BaseRequestInput {
             completionHandler(data)
         }.resume()
     }
-    
+}
+
+// MARK: - IMPLEMENT PUBLISHER -
+extension BaseRequest: BasePublisherInput {
+    // MARK: - EXPOSED METHODS -
     public func fetchAnyPublisherWith(_ url: URL) -> AnyPublisher<Data, APIError> {
         let request = URLRequest(url: url)
         
