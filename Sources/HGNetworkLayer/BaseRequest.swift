@@ -81,3 +81,9 @@ extension BaseRequest: BasePublisherInput {
     }
 }
 
+// MARK: - IMPLEMENT ASYNC AWAIT REQUEST -
+extension BaseRequest: BaseAsyncRequestInput {
+    public func asyncWith(_ url: URL) async throws -> Data {
+        return try await URLSession.shared.data(for: URLRequest(url: url)).0
+    }
+}

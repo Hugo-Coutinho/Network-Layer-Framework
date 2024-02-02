@@ -18,3 +18,8 @@ public protocol BasePublisherInput: AnyObject {
     // MARK: - INPUT METHODS -
     func fetchAnyPublisherWith(_ url: URL) -> AnyPublisher<Data, APIError>
 }
+
+public protocol BaseAsyncRequestInput: AnyObject {
+    // MARK: - INPUT METHODS -
+    func asyncWith(_ url: URL) async throws -> Data
+}
